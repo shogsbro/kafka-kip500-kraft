@@ -2,8 +2,8 @@ FROM alpine:3.12
 
 RUN apk add --no-cache openjdk8-jre bash curl \
   && mkdir -p /opt \
-  && curl -k "https://downloads.apache.org/kafka/2.8.1/kafka_2.13-2.8.1.tgz" | tar -xzf - -C /opt \
-  && mv /opt/kafka_2.13-2.8.1 /opt/kafka \
+  && curl -k "https://downloads.apache.org/kafka/3.0.0/kafka_2.13-3.0.0.tgz" | tar -xzf - -C /opt \
+  && mv /opt/kafka_2.13-3.0.0 /opt/kafka \
   && adduser -DH -s /sbin/nologin kafka \
   && chown -R kafka: /opt/kafka \
   && rm -rf /tmp/*
